@@ -1,0 +1,75 @@
+@Proceedings{MLDE2024,
+    booktitle = {Proceedings of the 1st ECAI Workshop on "Machine Learning Meets Differential Equations: From Theory to Applications"},
+    name = {1st ECAI Workshop on “Machine Learning Meets Differential Equations: From Theory to Applications”},
+    shortname = {ML-DEWorkshop2024},
+    editor = {Coelho, Cec\'{\i}lia and Zimmering, Bernd and Costa, M. Fernanda P. and Ferr\'{a}s, Lu\'{\i}s L. and Niggemann, Oliver},
+    volume = {255},
+    year = {2024},
+    start = {2024-10-20},
+    end = {2024-10-20},
+    published = {2024-10-06},
+    address = {Santiago de Compostela, Spain},
+    conference_url = {https://mlde-ecai-2024.github.io},
+}
+@InProceedings{monsel24,
+    title = {Time and State Dependent Neural Delay Differential Equations},
+    author = {Monsel, Thibault and Semeraro, Onofrio and Mathelin, Lionel and Charpiat, Guillaume},
+    pages = {1-20},
+    abstract = {Discontinuities and delayed terms are encountered in the governing equations of a large class of problems ranging from physics and engineering to medicine and economics. These systems cannot be properly modelled and simulated with standard Ordinary Differential Equations (ODE), or data-driven approximations such as Neural Ordinary Differential Equations (NODE). To circumvent this issue, latent variables are typically introduced to solve the dynamics of the system in a higher dimensional space and obtain the solution as a projection to the original space. However, this solution lacks physical interpretability. In contrast, Delay Differential Equations (DDEs), and their data-driven approximated counterparts, naturally appear as good candidates to characterize such systems. In this work we revisit the recently proposed Neural DDE by introducing Neural State-Dependent DDE (SDDDE), a general and flexible framework that can model multiple and state- and time-dependent delays. We show that our method is competitive and outperforms other continuous-class models on a wide variety of delayed dynamical systems. Code is available at the repository https://github.com/thibmonsel/Time-and-State-Dependent-Neural-Delay-Differential-Equations}
+}
+
+@InProceedings{goemaere24,
+    title = {Accelerating Hopfield Network Dynamics: Beyond Synchronous Updates and Forward Euler},
+    author = {Goemaere, C\'{e}dric and Deleu, Johannes and Demeester, Thomas},
+    pages = {1-21},
+    abstract = {The Hopfield network serves as a fundamental energy-based model in machine learning, capturing memory retrieval dynamics through an ordinary differential equation (ODE). The model's output, the equilibrium point of the ODE, is traditionally computed via synchronous updates using the forward Euler method. This paper aims to overcome some of the disadvantages of this approach. We propose a conceptual shift, viewing Hopfield networks as instances of Deep Equilibrium Models (DEQs). The DEQ framework not only allows for the use of specialized solvers, but also leads to new insights on an empirical inference technique that we will refer to as 'even-odd splitting'. Our theoretical analysis of the method uncovers a parallelizable asynchronous update scheme, which should converge roughly twice as fast as the conventional synchronous updates. Empirical evaluations validate these findings, showcasing the advantages of both the DEQ framework and even-odd splitting in digitally simulating energy minimization in Hopfield networks. The code is available at https://github.com/cgoemaere/hopdeq.}
+}
+
+@InProceedings{cross24,
+    title = {What happens to diffusion model likelihood when your model is conditional?},
+    author = {Cross, Mattias and Ragni, Anton},
+    pages = {1-14},
+    abstract = {Diffusion Models (DMs) iteratively denoise random samples to produce high-quality data. The iterative sampling process is derived from Stochastic Differential Equations (SDEs), allowing a speed-quality trade-off chosen at inference. Another advantage of sampling with differential equations is exact likelihood computation. These likelihoods have been used to rank unconditional DMs and for out-of-domain classification. Despite the many existing and possible uses of DM likelihoods, the distinct properties captured are unknown, especially in conditional contexts such as Text-To-Image (TTI) or Text-To-Speech synthesis (TTS). Surprisingly, we find that TTS DM likelihoods are agnostic to the text input. TTI likelihood is more expressive but cannot discern confounding prompts. Our results show that applying DMs to conditional tasks reveals inconsistencies and strengthens claims that the properties of DM likelihood are unknown. This impact sheds light on the previously unknown nature of DM likelihoods. Although conditional DMs maximise likelihood, the likelihood in question is not as sensitive to the conditioning input as one expects. This investigation provides a new point-of-view on diffusion likelihoods.}
+}
+
+@InProceedings{patan24,
+    title = {Neural-based models ensemble for identification of the vibrating beam system},
+    author = {Patan, Krzysztof and Patan, Maciej and Balik, Piotr},
+    pages = {1-13},
+    abstract = {The paper provides an effective machine learning-based approach to model design and implementation for the transverse vibrations of the actuated cantilever beam under the regime of nonlinear loads. In particular, the problems of reconstruction of non-linear actuation and dynamics of the beam are separately covered based on available measurement data. Little is expected from input sequences, except for application-required spectral coverage. The idea is to decompose the whole system into a serial connection of a static non-linear subsystem representing electromagnetic actuation with inherent built-in magnetic hysteresis and a non-linear dynamic subsystem approximating the spatio-temporal dynamics of the vibrating beam. Then, both components can be independently modeled in terms of dedicated neural networks: static feedforward network with augmented inputs providing the information on the signal gradient for the first subsystem and the multimodel neural ensemble with dedicated data fusion rule for the latter. In this context, a novel method is proposed here, where all candidate models are evaluated first using historical data, and based on achieved results, a proper weight is assigned to each model pointing out its contribution to the final response of the model. Each candidate model was designed using a recurrent neural network. The proposed approach provides great flexibility in model design, leading to a very high accuracy of system state estimation. In addition, the networks to be used have at most two layers with internal feedback loops, offering competitively attractive complexity. The advantage of this data-driven machine learning scheme is that incomplete knowledge of the physical model can be efficiently recovered or exchanged with the properly gathered information from input-output measurements. A physically relevant real-world application is given to illustrate the potential of the new design in the form of dynamic displacement modeling for an actuated vibrating beam system.}
+}
+
+@InProceedings{ehebrecht24,
+    title = {PINNtegrate: PINN-based Integral-Learning for Variational and Interface Problems},
+    author = {Ehebrecht, Frank and Scharle, Toni and Atzmueller, Martin},
+    pages = {1-16},
+    abstract = {Physics Informed Neural Networks (PINNs) feature applications to various partial differential equations (PDEs) in physics and engineering. Many real-world problems contain interfaces, i.e., discontinuities in some model parameter, and have to be included in any relevant PDE solver toolkit. These problems do not necessarily admit smooth solutions. Therefore, interfaces cannot be naturally included into classical PINNs, since their learning algorithm uses the strong formulation of the PDE and does not include solutions in the weak sense. The interface information can be incorporated either by an additional flux condition on the interface or by a variational formulation, thus also allowing weak solutions. This paper proposes new approaches to combine either the weak or energy functional formulation with the piece-wise strong formulation, to be able to tackle interface problems. Our new method PINNtegrate can incorporate integrals into the neural network learning algorithm. This novel method cannot only be applied to interface problems but also to other problems that contain an integrand as an optimization objective. We demonstrate PINNtegrate on variational minimal surface and interface problems of linear elliptic PDEs.}
+}
+
+@InProceedings{zimmering24,
+    title = {Optimising Neural Fractional Differential Equations for Performance and Efficiency},
+    author = {Zimmering, Bernd and Coelho, Cec\'{i}lia and Niggemann, Oliver},
+    pages = {1-22},
+    abstract = {Neural Ordinary Differential Equations (NODEs) are well-established architectures that fit an ODE, modelled by a neural network (NN), to data, effectively modelling complex dynamical systems. Recently, Neural Fractional Differential Equations (NFDEs) were proposed, inspired by NODEs, to incorporate non-integer order differential equations, capturing memory effects and long-range dependencies. In this work, we present an optimised implementation of the NFDE solver, achieving up to 570 times faster computations and up to 79 times higher accuracy. Additionally, the solver supports efficient multidimensional computations and batch processing. Furthermore, we enhance the experimental design to ensure a fair comparison of NODEs and NFDEs by implementing rigorous hyperparameter tuning and using consistent numerical methods. Our results demonstrate that for systems exhibiting fractional dynamics, NFDEs significantly outperform NODEs, particularly in extrapolation tasks on unseen time horizons. Although NODEs can learn fractional dynamics when time is included as a feature to the NN, they encounter difficulties in extrapolation due to reliance on explicit time dependence. The code is available at https://github.com/zimmer-ing/Neural-FDE}
+}
+
+@InProceedings{eilermann24,
+    title = {A Neural Ordinary Differential Equations Approach for 2D Flow Properties Analysis of Hydraulic Structures},
+    author = {Eilermann, Sebastian and L\"{u}ddecke, Lisa and Hohmann, Michael and Zimmering, Bernd and Oertel, Mario and Niggemann, Oliver},
+    pages = {1-17},
+    abstract = {In hydraulic engineering, the design and optimization of weir structures play a critical role in the management of river systems. Weirs must efficiently manage high flow rates while maintaining low overfall heights and predictable flow behavior. Determining upstream flow depths and discharge coefficients requires costly and time-consuming physical experiments or numerical simulations. Neural Ordinary Differential Equations (NODE) can be capable of predicting these flow features and reducing the effort of generating experimental and numerical data. We propose a simulation based 2D dataset of flow properties upstream of weir structures called FlowProp. In a second step we use a NODE-based approach to analyze flow behavior as well as discharge coefficients for various geometries. In the evaluation process, it is evident that the aforementioned approach is effective in describing the headwater, overfall height and tailwater.The approach is further capable of predicting the flow behavior of geometries beyond the training data. Project page and code: https://github.com/SEilermann/FlowProp}
+}
+
+@InProceedings{coelho24,
+    title = {Optimal Control of a Coastal Ecosystem Through Neural Ordinary Differential Equations},
+    author = {Coelho, Cec\'{i}lia and Costa, Fernanda and Ferr\'{a}s, Lu\'{i}s},
+    pages = {1-9},
+    abstract = {Optimal control problems (OCPs) are essentials in various domains such as science, engineering, and industry, requiring the optimisation of control variables for dynamic systems, along with the corresponding state variables, that minimise a given performance index. Traditional methods for solving OCPs often rely on numerical techniques and can be computationally expensive when the discretisation grid or time horizon changes. In this work, we introduce a novel approach that leverages Neural Ordinary Differential Equations (Neural ODEs) to model the dynamics of control variables in OCPs. By embedding Neural ODEs within the optimisation problem, we effectively address the limitations of traditional methods, eliminating the need to re-solve the OCP under different discretisation schemes. We apply this method to a coastal ecosystem OCP, demonstrating its efficacy in solving the problem over a 50-year horizon and extending predictions up to 70 years without re-solve the optimisation problem.}
+}
+
+@InProceedings{banerjee24,
+    title = {EMILY: Extracting sparse Model from ImpLicit dYnamics},
+    author = {Banerjee, Ayan and Gupta, Sandeep},
+    pages = {1-11},
+    abstract = {Sparse model recovery requires us to extract model coefficients of ordinary differential equations (ODE) with few nonlinear terms from data. This problem has been effectively solved in recent literature for the case when all state variables of the ODE are measured. In practical deployments, measurements of all the state variables of the underlying ODE model of a process are not available, resulting in implicit (unmeasured) dynamics. In this paper, we propose EMILY, that can extract the underlying ODE of a dynamical process even if much of the dynamics is implicit. We show the utility of EMILY on four baseline examples and compare with the state-of-the-art techniques such as SINDY-MPC. Results show that unlike SINDY-MPC, EMILY can recover model coefficients accurately under implicit dynamics.}
+}
