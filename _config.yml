@@ -4,7 +4,7 @@ booktitle: 'Proceedings of the 1st ECAI Workshop on "Machine Learning Meets Diff
 shortname: ML-DEWorkshop2024
 volume: '255'
 year: '2024'
-start: &1 2024-10-20
+start: 2024-10-20
 end: 2024-10-20
 published: 2024-10-06
 layout: proceedings
@@ -80,7 +80,7 @@ conference:
   url: https://mlde-ecai-2024.github.io
   location: Santiago de Compostela, Spain
   dates:
-  - *1
+  - 2024-10-20
 analytics:
   google:
     tracking_id: UA-92432422-1
